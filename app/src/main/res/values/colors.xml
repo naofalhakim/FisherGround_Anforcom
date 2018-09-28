@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#039BE5</color>
+    <color name="colorPrimaryDark">#0277BD</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="btnGreyText">#96989E</color>
+    <color name="grey">#dedede</color>
+
+    <!-- For Dot -->
+    <color name="dot_dark_screen1">#039BE5</color>
+    <color name="dot_dark_screen2">#039BE5</color>
+    <color name="dot_dark_screen3">#039BE5</color>
+
+    <color name="dot_light_screen1">#BBDEFB</color>
+    <color name="dot_light_screen2">#BBDEFB</color>
+    <color name="dot_light_screen3">#BBDEFB</color>
+
+    <array name="dot_active">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+    <array name="dot_inactive">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+</resources>

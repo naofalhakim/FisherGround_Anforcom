@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Slider.SliderActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/MyToolbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:layout_collapseMode="pin" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="145dp"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+    <Button
+        android:id="@+id/btnMasuk"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnblue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="Masuk"
+        android:elevation="5dp"
+        />
+
+
+</RelativeLayout>

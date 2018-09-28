@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/colorPrimary"
+    android:layout_alignParentTop="true">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logodonaku"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/txtSelamat"
+        android:layout_below="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selamat Datang Kembali!"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:layout_marginTop="35dp"/>
+    <TextView
+        android:id="@+id/txtMasuk"
+        android:layout_below="@+id/txtSelamat"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Masukkan alamat email dan kata sandi secara valid untuk masuk ke akun"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:layout_marginTop="4dp"/>
+    <LinearLayout
+        android:id="@+id/layoutFill"
+        android:layout_below="@+id/txtMasuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtMasuk">
+
+            <EditText
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:hint="username"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                android:hint="password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/white"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutBtn"
+        android:layout_below="@+id/layoutFill"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Lupa kata sandi?"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Masuk"
+            android:background="@drawable/btnwhite"
+            android:textColor="@color/btnGreyText"
+            android:elevation="3dp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtKebijakan"
+        android:layout_below="@+id/layoutBtn"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Dengan menggunakan DONAKU, anda menyetuji peraturan layanan dan kebijakan privasi."
+        android:textColor="@color/grey"
+        android:textSize="11dp"
+        android:layout_marginTop="25dp"/>
+
+</RelativeLayout>
