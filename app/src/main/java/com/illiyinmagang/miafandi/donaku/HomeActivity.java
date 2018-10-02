@@ -3,6 +3,7 @@ package com.illiyinmagang.miafandi.donaku;
 import android.graphics.Color;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +11,17 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment;
+import com.illiyinmagang.miafandi.donaku.Fragment.LihatDaganganFragment;
+import com.illiyinmagang.miafandi.donaku.Fragment.ProfilFragment;
 import com.illiyinmagang.miafandi.donaku.Slider.ViewPagerAdapter;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class HomeActivity extends AppCompatActivity {
-    ViewPager viewPager;
+    private ViewPager viewPager,viewPagerisiMenu;
     LinearLayout sliderDotsPanel;
     AppBarLayout Appbar;
     CollapsingToolbarLayout CoolToolbar;
@@ -25,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private int dotsCount;
     private ImageView[] dots;
+    private TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +40,27 @@ public class HomeActivity extends AppCompatActivity {
         Appbar = (AppBarLayout)findViewById(R.id.MyAppbar);
         CoolToolbar = (CollapsingToolbarLayout) findViewById(R.id.MyCollapseToolbar);
 
+        //menu tab
+        viewPagerisiMenu = (ViewPager) findViewById(R.id.viewPagerMenu);
+        ViewPagerMenuAdapter viewPagerAdapterMenu = new ViewPagerMenuAdapter(getSupportFragmentManager());
+
+        viewPagerAdapterMenu.addFragment(DaftarHargaFragment.newInstance(),"DAFTAR HARGA");
+        viewPagerAdapterMenu.addFragment(LihatDaganganFragment.newInstance(),"LIHAT DAGANGAN");
+        viewPagerAdapterMenu.addFragment(ProfilFragment.newInstance(),"PROFIL");
+        viewPagerisiMenu.setAdapter(viewPagerAdapterMenu);
+
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPagerisiMenu);
+
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#0ABDE3"));
+        tabLayout.setTabTextColors(Color.parseColor("#8692A5"), Color.parseColor("#727272"));
+
         Appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if(Math.abs(verticalOffset) > 180){
                     ExpandedActionBar = false;
-                    CoolToolbar.setTitle("DONAKU");
+                    CoolToolbar.setTitle("Fisher Ground");
                     //CoolToolbar.setContentScrimColor(Color.parseColor("#ffffff"));
                 }else{
                     ExpandedActionBar = true;
@@ -97,6 +118,8 @@ public class HomeActivity extends AppCompatActivity {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new MyTimerTask(),10000,7000);
     }
+
+
     public class MyTimerTask extends TimerTask {
 
         @Override
