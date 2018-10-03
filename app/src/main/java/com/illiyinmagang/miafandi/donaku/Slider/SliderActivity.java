@@ -24,6 +24,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.illiyinmagang.miafandi.donaku.LoginActivity;
 import com.illiyinmagang.miafandi.donaku.R;
+import com.illiyinmagang.miafandi.donaku.introLoginActivity;
 
 public class SliderActivity extends AppCompatActivity {
     private ViewPagerAdapter viewPagerAdapter;
@@ -44,7 +45,7 @@ public class SliderActivity extends AppCompatActivity {
         introManager = new SliderIntromanagerActivity(this);
         if (!introManager.Check()) {
             introManager.setFirst(false);
-            Intent intent = new Intent(SliderActivity.this, LoginActivity.class);
+            Intent intent = new Intent(SliderActivity.this, introLoginActivity.class);
 
             preferenceIntro.createIntro();
             startActivity(intent);
@@ -74,7 +75,7 @@ public class SliderActivity extends AppCompatActivity {
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SliderActivity.this,LoginActivity.class);
+                Intent intent = new Intent(SliderActivity.this,introLoginActivity.class);
                 startActivity(intent);
             }
         });

@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        toolbar.setTitle("DONAKU");
+        toolbar.setTitle("FISHER GROUND");
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         //toolbar.setBackgroundColor(Color.parseColor("#0277BD"));
         setSupportActionBar(toolbar);
@@ -133,9 +133,7 @@ public class HomeActivity extends AppCompatActivity {
                         viewPager.setCurrentItem(1);
                     } else if(viewPager.getCurrentItem() == 1){
                         viewPager.setCurrentItem(2);
-                    } else if(viewPager.getCurrentItem() == 2){
-                        viewPager.setCurrentItem(3);
-                    }else{
+                    } else{
                         viewPager.setCurrentItem(0);
                     }
                 }

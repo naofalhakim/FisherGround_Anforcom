@@ -17,9 +17,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Slider.SliderActivity" />
-        <activity android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustPan|adjustResize|adjustUnspecified"/>
-        <activity android:name=".HomeActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize|adjustUnspecified" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".introLoginActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

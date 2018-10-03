@@ -23,16 +23,17 @@
         android:layout_marginTop="27dp"
         android:textColor="@color/colorPrimary"
         android:layout_centerHorizontal="true"/>
+
     <TextView
         android:id="@+id/contain"
-        android:layout_below="@+id/title"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:text="Donasikan anda aman ditangan kita, pantau terus penyaluran dana yang kami lakukan"
-        android:textSize="14dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:gravity="center"/>
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Dengan aplikasi ini kamu tidak usah khawatir ada penipuan, barang tidak sampai uang kami kembalikan"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp" />
 
 </RelativeLayout>

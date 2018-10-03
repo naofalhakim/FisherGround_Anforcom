@@ -12,27 +12,29 @@
         android:src="@drawable/img1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"/>
+
     <TextView
         android:id="@+id/title"
-        android:layout_below="@+id/img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mudah"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
+        android:text="Seafood Segar"
         android:textColor="@color/colorPrimary"
-        android:layout_centerHorizontal="true"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/contain"
-        android:layout_below="@+id/title"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:text="Donasikan hartamu dengan mudah hanya dengan sekali tekan"
-        android:textSize="14dp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:gravity="center"/>
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Disini kamu bisa membeli seafood segar tanpa harus pergi ke pasar ikan"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14dp" />
 
 </RelativeLayout>
