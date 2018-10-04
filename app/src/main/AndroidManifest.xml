@@ -21,8 +21,10 @@
             android:name=".LoginActivity"
             android:windowSoftInputMode="adjustPan|adjustResize|adjustUnspecified" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".introLoginActivity"
-            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".introLoginActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".HomeUserActivity"></activity>
     </application>
 
 </manifest>

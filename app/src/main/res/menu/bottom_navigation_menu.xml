@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btmNavHome"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:iconTint="#435073">
+
+    </item>
+
+    <item
+        android:id="@+id/btmNavDaftarHarga"
+        android:icon="@drawable/ic_home_foody"
+        android:title="Harga"
+        android:iconTint="#435073">
+    </item>
+
+    <item
+        android:id="@+id/btmNavRequest"
+        android:icon="@drawable/ic_home_foody"
+        android:title="Request"
+        android:iconTint="#435073">
+    </item>
+
+    <item
+        android:id="@+id/btmNavInvestasi"
+        android:icon="@drawable/ic_home_foody"
+        android:title="Investasi"
+        android:iconTint="#435073">
+    </item>
+
+    <item
+        android:id="@+id/btmNavProfile"
+        android:icon="@drawable/ic_home_foody"
+        android:title="Profil"
+        android:iconTint="#435073">
+    </item>
+</menu>
