@@ -10,28 +10,28 @@
 
     <item
         android:id="@+id/btmNavDaftarHarga"
-        android:icon="@drawable/ic_home_foody"
+        android:icon="@drawable/ic_daftar_harga"
         android:title="Harga"
         android:iconTint="#435073">
     </item>
 
     <item
         android:id="@+id/btmNavRequest"
-        android:icon="@drawable/ic_home_foody"
+        android:icon="@drawable/ic_investasi"
         android:title="Request"
         android:iconTint="#435073">
     </item>
 
     <item
         android:id="@+id/btmNavInvestasi"
-        android:icon="@drawable/ic_home_foody"
+        android:icon="@drawable/ic_request"
         android:title="Investasi"
         android:iconTint="#435073">
     </item>
 
     <item
         android:id="@+id/btmNavProfile"
-        android:icon="@drawable/ic_home_foody"
+        android:icon="@drawable/ic_profile"
         android:title="Profil"
         android:iconTint="#435073">
     </item>

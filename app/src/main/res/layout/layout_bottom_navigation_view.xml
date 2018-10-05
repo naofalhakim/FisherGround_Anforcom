@@ -12,7 +12,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bottom_navigation_view"
-            app:menu="@menu/bottom_navigation_menu">
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemTextColor="@color/bottom_nav_color"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
 
         </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
