@@ -3,6 +3,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.support.design.widget.BottomNavigationView;
 
@@ -11,22 +12,26 @@ import com.illiyinmagang.miafandi.donaku.Fragment.HomeUser.HomeFragment;
 import com.illiyinmagang.miafandi.donaku.Fragment.Investasi.InvestasiFragment;
 import com.illiyinmagang.miafandi.donaku.Fragment.Request.RequestFragment;
 import com.illiyinmagang.miafandi.donaku.Fragment.profile.ProfileFragment;
+import com.illiyinmagang.miafandi.donaku.Utils.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
-public class HomeUserActivity extends AppCompatActivity implements BottomNavigationViewEx.OnNavigationItemSelectedListener{
+public class HomeUserActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     BottomNavigationViewEx bnv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_user);
 
-        BottomNavigationViewEx bnv = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
-        bnv.enableAnimation(false);
-        bnv.enableShiftingMode(false);
-        bnv.enableItemShiftingMode(true);
-
+        BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.bottomNavViewBar);
         bnv.setOnNavigationItemSelectedListener(this);
         loadFragment(new HomeFragment());
+
+        setupBottomNavigationView();
+    }
+
+    private void setupBottomNavigationView(){
+        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
+        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationViewEx);
     }
 
     private boolean loadFragment(Fragment fragment){

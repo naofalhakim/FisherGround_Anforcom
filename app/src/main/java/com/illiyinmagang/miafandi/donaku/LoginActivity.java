@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,user+" pass "+pass,Toast.LENGTH_LONG).show();
                 if(user.equals("") && pass.equals("")){
                     Toast.makeText(LoginActivity.this,"Tolong isi username dan password",Toast.LENGTH_LONG).show();
-                }else if (user.equals("pelanggan") && pass.equals("pelanggan")){
+                }else if (user.equals("a") && pass.equals("a")){
                     Intent intent= new Intent(LoginActivity.this, HomeUserActivity.class);
                     startActivity(intent);
                 }else if(user.equals("nelayan") && pass.equals("nelayan")){

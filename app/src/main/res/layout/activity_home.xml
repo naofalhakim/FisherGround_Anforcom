@@ -35,17 +35,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="280dp">
 
-                    <!--<FrameLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--&gt;-->
-
-                        <!--<com.illiyinmagang.miafandi.donaku.Slider.SliderView-->
-                            <!--android:id="@+id/sliderView"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"/>-->
-
-                    <!--</FrameLayout>-->
                     <android.support.v4.view.ViewPager
                         android:id="@+id/viewPager"
                         android:layout_width="match_parent"

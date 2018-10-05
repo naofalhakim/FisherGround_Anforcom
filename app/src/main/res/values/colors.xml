@@ -7,7 +7,7 @@
     <color name="accentText">#D62322</color>
     <color name="accentButton">#F2C72E</color>
     <color name="white">#FFFFFF</color>
-    <color name="whiteGrey">#f7f7f7</color>
+    <color name="whiteGrey">#dddddd</color>
     <color name="btnGreyText">#96989E</color>
     <color name="grey">#dedede</color>
     <color name="tool">#A6D8E2</color>
