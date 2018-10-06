@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="primaryText">#37474F</color>
     <color name="accentText">#D62322</color>
+    <color name="hargaText">#E53935</color>
     <color name="accentButton">#F2C72E</color>
     <color name="white">#FFFFFF</color>
     <color name="whiteGrey">#dddddd</color>

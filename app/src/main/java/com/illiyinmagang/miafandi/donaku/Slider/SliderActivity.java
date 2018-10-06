@@ -90,7 +90,7 @@ public class SliderActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(38);
-            dots[i].setLetterSpacing((float) 0.7);
+            //dots[i].setLetterSpacing((float) 0.7);
             dots[i].setTextColor(colorInactive[position]);
             dotsLayout.addView(dots[i]);
         }

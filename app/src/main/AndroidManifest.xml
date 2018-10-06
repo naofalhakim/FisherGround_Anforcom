@@ -24,7 +24,8 @@
         <activity
             android:name=".introLoginActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".HomeUserActivity"></activity>
+        <activity android:name=".HomeUserActivity" />
+        <activity android:name=".Fragment.HomeUser.DetailJual"></activity>
     </application>
 
 </manifest>

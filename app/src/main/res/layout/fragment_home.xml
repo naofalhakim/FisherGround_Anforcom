@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.HomeUser.HomeFragment">
+    tools:context=".Fragment.HomeUser.HomeFragment"
+    android:background="#F4F5F5">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -63,16 +67,22 @@
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/AppThemeDefault"/>
             </android.support.design.widget.CollapsingToolbarLayout>
-
         </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPagerMenu"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            />
-
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"/>
+        </RelativeLayout>
     </android.support.design.widget.CoordinatorLayout>
-
+</RelativeLayout>
 </FrameLayout>

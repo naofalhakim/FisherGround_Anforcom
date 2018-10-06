@@ -11,6 +11,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.illiyinmagang.miafandi.donaku.Fragment.adapter.GridAdapter;
 import com.illiyinmagang.miafandi.donaku.R;
 import com.illiyinmagang.miafandi.donaku.Slider.ViewPagerAdapter;
 
@@ -35,6 +38,10 @@ public class HomeFragment extends Fragment {
     CollapsingToolbarLayout CoolToolbar;
     Boolean ExpandedActionBar = true;
     private Toolbar toolbar;
+
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter mAdapter;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -126,6 +133,15 @@ public class HomeFragment extends Fragment {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new HomeFragment.MyTimerTask(),12000,8000);
 
+        //Recycler View with greed
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+
+        mLayoutManager = new GridLayoutManager(getActivity(),2);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        mAdapter = new GridAdapter(this.getContext());
+        mRecyclerView.setAdapter(mAdapter);
 
         return rootView;
     }
