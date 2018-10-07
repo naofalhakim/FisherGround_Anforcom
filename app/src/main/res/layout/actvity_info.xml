@@ -47,7 +47,7 @@
                 />
 
             <LinearLayout
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -56,21 +56,21 @@
                 <Button
                     android:id="@+id/btn_poin"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
                     android:background="@drawable/btnaccent"
                     android:text="100 Points"
-                    android:padding="12dp"
                     android:textSize="12sp"
                     />
 
                 <Button
                     android:id="@+id/btn_transaksi"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
                     android:background="@drawable/btnaccent"
                     android:text="Lihat Transaksi"
                     android:layout_marginLeft="10dp"
-                    android:padding="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:textSize="12sp"
                     />
             </LinearLayout>
