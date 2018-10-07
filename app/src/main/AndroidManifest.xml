@@ -25,12 +25,17 @@
             android:name=".introLoginActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".HomeUserActivity" />
+<!--<<<<<<< HEAD-->
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".LogTransaksiActivity"></activity>
+<!--=======-->
+        <activity android:name=".Fragment.HomeUser.DetailJual" />
+        <activity android:name=".Fragment.Investasi.DetailInvestasi"></activity>
+<!--&gt;>>>>>> abc2120c8bde36e116727cb3702d053f986b2365-->
     </application>
 
 </manifest>

@@ -5,13 +5,15 @@
     <color name="colorAccent">#FF4081</color>
     <color name="primaryText">#37474F</color>
     <color name="accentText">#D62322</color>
+    <color name="hargaText">#E53935</color>
     <color name="accentButton">#F2C72E</color>
     <color name="white">#FFFFFF</color>
-    <color name="whiteGrey">#f7f7f7</color>
+    <color name="whiteGrey">#dddddd</color>
     <color name="btnGreyText">#96989E</color>
     <color name="textMain">#909394</color>
     <color name="grey">#dedede</color>
     <color name="tool">#A6D8E2</color>
+    <color name="txtHijau">#18AD71</color>
 
     <!-- For Dot -->
     <color name="dot_dark_screen1">#039BE5</color>

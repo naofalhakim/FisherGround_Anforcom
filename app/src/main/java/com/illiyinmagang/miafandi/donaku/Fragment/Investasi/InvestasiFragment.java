@@ -4,13 +4,19 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.illiyinmagang.miafandi.donaku.Fragment.adapter.GridAdapter;
+import com.illiyinmagang.miafandi.donaku.Fragment.adapter.InvestasiAdapter;
 import com.illiyinmagang.miafandi.donaku.R;
 
 public class InvestasiFragment extends Fragment {
+    RecyclerView mRecyclerView;
 
     public InvestasiFragment() {
         // Required empty public constructor
@@ -25,6 +31,12 @@ public class InvestasiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_investasi, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_investasi, container, false);
+        //Recycler View with greed
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.listInvestasi);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        mRecyclerView.setAdapter(new InvestasiAdapter(this.getContext()));
+        return rootView;
     }
 }
