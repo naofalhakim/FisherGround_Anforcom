@@ -39,9 +39,20 @@ public class DaftarHargaFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         ikanJuals = new ArrayList();
-        for (int i = 0; i < 7; i++) {
-            ikanJuals.add(new IkanJual(i, "Ikan Tuna", 45000, 39000, 100000, R.drawable.ikan1));
-        }
+        ikanJuals.add(new IkanJual(1, "Ikan Tongkol", 22000, 20000, 21000, R.drawable.itongkol));
+        ikanJuals.add(new IkanJual(2, "Cumi-Cumi", 45000, 20000, 43000, R.drawable.icumi));
+        ikanJuals.add(new IkanJual(2, "Gurita", 35000, 20000, 32000, R.drawable.igurita));
+        ikanJuals.add(new IkanJual(2, "Kakap Merah", 60000, 20000, 57000, R.drawable.ikakap));
+        ikanJuals.add(new IkanJual(2, "Ikan Kembung", 25000, 20000, 22000, R.drawable.ikembung));
+        ikanJuals.add(new IkanJual(2, "Kepiting", 55000, 20000, 50000, R.drawable.ikepiting));
+        ikanJuals.add(new IkanJual(2, "Kerang", 15000, 20000, 12000, R.drawable.ikerang));
+        ikanJuals.add(new IkanJual(2, "Patin", 35000, 20000, 34000, R.drawable.ipatin));
+        ikanJuals.add(new IkanJual(2, "Udang", 35000, 20000, 33000, R.drawable.iudang));
+        ikanJuals.add(new IkanJual(2, "Gurami", 45000, 20000, 40000, R.drawable.igurame));
+        ikanJuals.add(new IkanJual(2, "Kerang Hijau", 20000, 20000, 18000, R.drawable.ikeranghijau));
+        ikanJuals.add(new IkanJual(2, "Lobster", 85000, 20000, 80000, R.drawable.ilobster));
+
+
 
         recyclerView.setAdapter(new DaftarHargaViewAdapter(ikanJuals,getContext()));
 

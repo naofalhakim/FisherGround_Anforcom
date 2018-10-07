@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.illiyinmagang.miafandi.donaku.ChatActivity;
 import com.illiyinmagang.miafandi.donaku.R;
 
 public class DetailJual extends AppCompatActivity {
@@ -92,7 +93,7 @@ public class DetailJual extends AppCompatActivity {
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DetailJual.this,MessageActivity.class));
+                startActivity(new Intent(DetailJual.this,ChatActivity.class));
             }
         });
 
