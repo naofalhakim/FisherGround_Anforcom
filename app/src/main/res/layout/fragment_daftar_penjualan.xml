@@ -6,6 +6,7 @@
     tools:context="com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment">
 
     <LinearLayout
+        android:id="@+id/form_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

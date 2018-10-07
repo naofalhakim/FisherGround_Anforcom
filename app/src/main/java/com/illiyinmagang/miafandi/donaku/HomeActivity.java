@@ -35,9 +35,8 @@ public class HomeActivity extends AppCompatActivity {
 //    LinearLayout sliderDotsPanel;
     AppBarLayout Appbar;
     CollapsingToolbarLayout CoolToolbar;
-    Boolean ExpandedActionBar = true;
 
-    private Toolbar toolbar, toolbarMain;
+    private Toolbar toolbar;
     private int dotsCount;
     private ImageView[] dots;
     private int[] layouts;

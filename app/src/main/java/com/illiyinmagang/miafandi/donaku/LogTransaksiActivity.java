@@ -46,8 +46,8 @@ public class LogTransaksiActivity extends AppCompatActivity {
         viewPagerisiMenu = (ViewPager) findViewById(R.id.viewPagerMenu);
         ViewPagerMenuAdapter viewPagerAdapterMenu = new ViewPagerMenuAdapter(getSupportFragmentManager());
 
-        viewPagerAdapterMenu.addFragment(DaftarPenjualanFragment.newInstance(),"Penjualan");
-        viewPagerAdapterMenu.addFragment(LihatDaganganFragment.newInstance(),"Permintaan");
+        viewPagerAdapterMenu.addFragment(DaftarPenjualanFragment.newInstance("Penjualan"),"Penjualan");
+        viewPagerAdapterMenu.addFragment(DaftarPenjualanFragment.newInstance("Permintaan"),"Permintaan");
         viewPagerisiMenu.setAdapter(viewPagerAdapterMenu);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);

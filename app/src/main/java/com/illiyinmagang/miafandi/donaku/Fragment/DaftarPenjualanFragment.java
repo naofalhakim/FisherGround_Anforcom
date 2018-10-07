@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.illiyinmagang.miafandi.donaku.R;
 import com.illiyinmagang.miafandi.donaku.model.IkanJual;
@@ -17,14 +18,17 @@ import java.util.List;
 
 public class DaftarPenjualanFragment extends Fragment {
 
+    private String page;
+
     public DaftarPenjualanFragment() {
         // Required empty public constructor
     }
 
 
-    public static DaftarPenjualanFragment newInstance() {
+    public static DaftarPenjualanFragment newInstance(String page) {
         DaftarPenjualanFragment fragment = new DaftarPenjualanFragment();
         Bundle args = new Bundle();
+        fragment.page = page;
         fragment.setArguments(args);
         return fragment;
     }
@@ -36,6 +40,8 @@ public class DaftarPenjualanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_daftar_penjualan, container, false);
+        LinearLayout linearLayout = (LinearLayout) rootView.findViewById(R.id.form_search);
+
         recyclerView = (RecyclerView) rootView.findViewById(R.id.list_hargaIkan);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
@@ -44,7 +50,14 @@ public class DaftarPenjualanFragment extends Fragment {
             penjualans.add(new Penjualan(i, "Naofal","Ikan Kakap 10 Kg","0822", R.drawable.mask));
         }
 
-        recyclerView.setAdapter(new DaftarPenjualanViewAdapter(penjualans,getContext()));
+        if(page.equals("Penjualan")){
+            recyclerView.setAdapter(new DaftarPenjualanViewAdapter(penjualans,getContext()));
+            linearLayout.setVisibility(View.VISIBLE);
+        }else{
+            recyclerView.setAdapter(new DaftarPermintaanViewAdapter(penjualans,getContext()));
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+
 
         return rootView;
     }

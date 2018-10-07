@@ -1,6 +1,5 @@
 package com.illiyinmagang.miafandi.donaku.Fragment;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -21,29 +20,29 @@ import java.util.List;
  * Created by user on 07/10/2018.
  */
 
-public class DaftarPenjualanViewAdapter extends RecyclerView.Adapter<DaftarPenjualanViewAdapter.ViewHolder>{
+public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPermintaanViewAdapter.ViewHolder>{
     private List<Penjualan> penjualans;
     private Context context;
 
-    public DaftarPenjualanViewAdapter(List<Penjualan> penjualans, Context context) {
+    public DaftarPermintaanViewAdapter(List<Penjualan> penjualans, Context context) {
         this.penjualans = penjualans;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public DaftarPenjualanViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public DaftarPermintaanViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(context).inflate(R.layout.item_list_penjualan,viewGroup,false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DaftarPenjualanViewAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull DaftarPermintaanViewAdapter.ViewHolder viewHolder, int i) {
         viewHolder.penjualan = penjualans.get(i);
         viewHolder.imageView.setImageResource(R.drawable.ic_profil);
         viewHolder.txtNama.setText(viewHolder.penjualan.getNama());
         viewHolder.txtPesanan.setText(viewHolder.penjualan.getPesanan());
-        viewHolder.txtDeail.setText("Lihat Detail");
+        viewHolder.txtDeail.setText("Konfirmasi");
     }
 
     @Override
@@ -66,7 +65,7 @@ public class DaftarPenjualanViewAdapter extends RecyclerView.Adapter<DaftarPenju
 
         @Override
         public void onClick(View v) {
-            context.startActivity(new Intent(context, DetailPenjualanActivity.class));
+//            context.startActivity(new Intent(context, DetailPenjualanActivity.class));
         }
     }
 }
