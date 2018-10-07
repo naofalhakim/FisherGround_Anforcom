@@ -1,5 +1,6 @@
 package com.illiyinmagang.miafandi.donaku.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.illiyinmagang.miafandi.donaku.UploadDaganganActivity;
 import com.illiyinmagang.miafandi.donaku.model.IkanJual;
 import com.illiyinmagang.miafandi.donaku.R;
 
@@ -48,6 +50,14 @@ public class LihatDaganganFragment extends Fragment {
         }
 
         recyclerView.setAdapter(new ListHargaViewAdapter(ikanJuals,getContext()));
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), UploadDaganganActivity.class));
+            }
+        });
+
         return rootView;
 
 

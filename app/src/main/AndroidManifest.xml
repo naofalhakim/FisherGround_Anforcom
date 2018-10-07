@@ -34,17 +34,19 @@
             android:name=".Fragment.Investasi.DetailInvestasi"
             android:label="Detail Investasi"
             android:theme="@style/AppThemeDefault" />
-        <activity android:name=".Fragment.HomeUser.MessageActivity"
+        <activity
+            android:name=".Fragment.HomeUser.MessageActivity"
             android:label="Message"
-            android:theme="@style/AppThemeDefault"/>
-        <activity android:name=".Fragment.HomeUser.BayarActivity"
+            android:theme="@style/AppThemeDefault" />
+        <activity
+            android:name=".Fragment.HomeUser.BayarActivity"
             android:label="Transaksi"
-            android:theme="@style/AppThemeDefault"></activity>
-
+            android:theme="@style/AppThemeDefault" />
         <activity android:name=".LogTransaksiActivity" />
         <activity android:name=".DetailPenjualanActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".UploadDaganganActivity"></activity>
     </application>
 
 </manifest>
