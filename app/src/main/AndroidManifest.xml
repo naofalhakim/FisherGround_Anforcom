@@ -24,7 +24,13 @@
         <activity
             android:name=".introLoginActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".HomeUserActivity"></activity>
+        <activity android:name=".HomeUserActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".LogTransaksiActivity"></activity>
     </application>
 
 </manifest>

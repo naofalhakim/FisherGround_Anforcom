@@ -9,13 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.illiyinmagang.miafandi.donaku.IkanJual;
+import com.illiyinmagang.miafandi.donaku.model.IkanJual;
 import com.illiyinmagang.miafandi.donaku.R;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
-import java.util.zip.Inflater;
 
 /**
  * Created by user on 02/10/2018.
@@ -25,6 +22,7 @@ public class DaftarHargaViewAdapter extends RecyclerView.Adapter<DaftarHargaView
 
     private List<IkanJual> ikanJuals;
     private Context context;
+
     public DaftarHargaViewAdapter(List<IkanJual> ikanJuals, Context context) {
         this.ikanJuals = ikanJuals;
         this.context = context;
