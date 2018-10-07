@@ -37,7 +37,8 @@
         <activity android:name=".Fragment.Investasi.DetailInvestasi" />
         <!-- &gt;>>>>>> abc2120c8bde36e116727cb3702d053f986b2365 -->
         <activity android:name=".DetailPenjualanActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>
