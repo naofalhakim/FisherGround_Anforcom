@@ -31,16 +31,16 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 //        super();
         this.context = context;
         listIkan = new ArrayList<DaftarIkan>();
-        listIkan.add(new DaftarIkan("Ikan Tongkol",R.drawable.itongkol,20));
-        listIkan.add(new DaftarIkan("Cumi-Cumi",R.drawable.icumi,45));
-        listIkan.add(new DaftarIkan("Gurita",R.drawable.igurita,35));
-        listIkan.add(new DaftarIkan("Kakap Merah",R.drawable.ikakap,60));
-        listIkan.add(new DaftarIkan("Ikan Kembung",R.drawable.ikembung,25));
-        listIkan.add(new DaftarIkan("Kepiting",R.drawable.ikepiting,55));
-        listIkan.add(new DaftarIkan("Kerang",R.drawable.ikerang,15));
-        listIkan.add(new DaftarIkan("Patin",R.drawable.ipatin,35));
-        listIkan.add(new DaftarIkan("Udang",R.drawable.iudang,35));
-        listIkan.add(new DaftarIkan("Gurami",R.drawable.igurame,45));
+        listIkan.add(new DaftarIkan("Ikan Tongkol",R.drawable.itongkol,20,100));
+        listIkan.add(new DaftarIkan("Cumi-Cumi",R.drawable.icumi,45,250));
+        listIkan.add(new DaftarIkan("Gurita",R.drawable.igurita,35,300));
+        listIkan.add(new DaftarIkan("Kakap Merah",R.drawable.ikakap,60,150));
+        listIkan.add(new DaftarIkan("Ikan Kembung",R.drawable.ikembung,25,1000));
+        listIkan.add(new DaftarIkan("Kepiting",R.drawable.ikepiting,55,500));
+        listIkan.add(new DaftarIkan("Kerang",R.drawable.ikerang,15,1500));
+        listIkan.add(new DaftarIkan("Patin",R.drawable.ipatin,35,700));
+        listIkan.add(new DaftarIkan("Udang",R.drawable.iudang,35,2500));
+        listIkan.add(new DaftarIkan("Gurami",R.drawable.igurame,45,700));
     }
 
     @Override
@@ -81,9 +81,10 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             int position = getAdapterPosition();
             DaftarIkan ikanKu = listIkan.get(position);
             Intent intent = new Intent(context, DetailJual.class);
-            intent.putExtra("namaIkan", fishName.getText().toString());
+            intent.putExtra("namaIkan", ikanKu.getNamaIkan());
             intent.putExtra("gambarIkan",ikanKu.getImgIkan());
-            intent.putExtra("hargaIkan",ikanKu.getHargaIkan());
+            intent.putExtra("hargaIkan",Integer.toString(ikanKu.getHargaIkan()));
+            intent.putExtra("stockIkan",Integer.toString(ikanKu.getStock()));
             context.startActivity(intent);
         }
     }

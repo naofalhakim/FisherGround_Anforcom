@@ -25,8 +25,21 @@
             android:name=".introLoginActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".HomeUserActivity" />
-        <activity android:name=".Fragment.HomeUser.DetailJual" />
-        <activity android:name=".Fragment.Investasi.DetailInvestasi"></activity>
+        <activity
+            android:name=".Fragment.HomeUser.DetailJual"
+            android:label="Detail Ikan"
+            android:theme="@style/AppThemeDefault"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Fragment.Investasi.DetailInvestasi"
+            android:label="Detail Investasi"
+            android:theme="@style/AppThemeDefault" />
+        <activity android:name=".Fragment.HomeUser.MessageActivity"
+            android:label="Message"
+            android:theme="@style/AppThemeDefault"/>
+        <activity android:name=".Fragment.HomeUser.BayarActivity"
+            android:label="Transaksi"
+            android:theme="@style/AppThemeDefault"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/btnwhite"
+    android:elevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="10dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Kurir yang tersedia di daerah ini"
+            android:textColor="@color/btnGreyText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_gravity="left"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:text="Cargo Kereta Api"
+                android:textSize="16dp"
+                android:textColor="@color/btnGreyText"
+                android:buttonTint="@color/btnGreyText"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:text="Ekspedisi"
+                android:textSize="16dp"
+                android:textColor="@color/btnGreyText"
+                android:buttonTint="@color/btnGreyText"
+                android:textStyle="bold"
+                />
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:text="Dikirim Nelayan"
+                android:textSize="16dp"
+                android:textColor="@color/btnGreyText"
+                android:buttonTint="@color/btnGreyText"
+                android:textStyle="bold"/>
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:text="Ambil Sendiri"
+                android:textSize="16dp"
+                android:textColor="@color/btnGreyText"
+                android:buttonTint="@color/btnGreyText"
+                android:textStyle="bold"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/pilih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnorange"
+            android:text="pilih"/>
+    </LinearLayout>
+</RelativeLayout>
