@@ -14,7 +14,7 @@ import com.illiyinmagang.miafandi.donaku.R;
 public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
-    private int[] images = {R.drawable.img1,R.drawable.img2, R.drawable.img3};
+    private int[] images = {R.drawable.a1,R.drawable.a2, R.drawable.a3};
 
     public ViewPagerAdapter(Context context) {
         this.context = context;

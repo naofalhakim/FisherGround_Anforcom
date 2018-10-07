@@ -38,6 +38,7 @@ public class DaftarHargaViewAdapter extends RecyclerView.Adapter<DaftarHargaView
     @Override
     public void onBindViewHolder(@NonNull DaftarHargaViewAdapter.ViewHolder holder, int position) {
         holder.ikanJual = ikanJuals.get(position);
+        holder.imgIkan.setImageResource(holder.ikanJual.getImage());
         holder.txtNamaIkan.setText(holder.ikanJual.getNama());
         holder.txtHargaIkan.setText("Rp "+holder.ikanJual.getHarga()+" / kg");
         if(holder.ikanJual.getHarga() < holder.ikanJual.getHargasblm()){

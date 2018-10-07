@@ -16,7 +16,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/MyToolbar"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
             <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/MyToolbar"
                 android:id="@+id/listInvestasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
