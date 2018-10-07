@@ -1,9 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.HomeUser.DetailJual">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageDetailIkan"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ikakap" />
+
+        <LinearLayout
+            android:id="@+id/harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/imageDetailIkan"
+            android:background="@color/white"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtDetailNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ikan Kakap Merah"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryText"/>
+                <TextView
+                    android:id="@+id/detailFoodJarak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jl.Patimura No.11 Muncar Banyuwangi"
+                    android:textSize="12dp"
+                    android:textColor="@color/btnGreyText"/>
+                <RelativeLayout
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txtroi"
+                        android:text="Stock tersedia: "
+                        android:textSize="12dp"
+                        android:textColor="@color/btnGreyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/stock"
+                        android:layout_toRightOf="@+id/txtroi"
+                        android:text="100"
+                        android:textSize="13dp"
+                        android:layout_marginTop="-2dp"
+                        android:textColor="@color/primaryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_toRightOf="@+id/stock"
+                        android:text=" kg"
+                        android:textSize="12dp"
+                        android:textColor="@color/btnGreyText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:gravity="right">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/btnGreyText"
+                    android:layout_marginRight="4dp"/>
+                <TextView
+                    android:id="@+id/detailHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12000"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accentText"
+                    android:layout_marginRight="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardtop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            android:layout_below="@+id/harga">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/foodName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:textSize="15dp"
+                        android:text="Jumlah Beli (Kg)"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/primaryText"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp"
+                        >
+                        <TextView
+                            android:id="@+id/decrement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btnblue"
+                            android:paddingBottom="10px"
+                            android:paddingLeft="13px"
+                            android:paddingRight="13px"
+                            android:paddingTop="10px"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="1"
+                            android:padding="10px"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-2dp"/>
+                        <TextView
+                            android:id="@+id/increment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:text="+"
+                            android:padding="10px"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:background="@drawable/btnblue"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berikan catatan untuk penjual"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12dp"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="tambah catatan..."
+                    android:textSize="14dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardKurir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="2dp"
+            android:layout_below="@+id/cardtop">
+
+            <RelativeLayout
+                android:id="@+id/kurir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+                <TextView
+                    android:id="@+id/kurirTersedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Cek Kurir Tersedia"
+                    android:textColor="@color/primaryText"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:src="@drawable/ic_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <RelativeLayout
+            android:layout_below="@+id/cardKurir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp">
+            <ImageView
+                android:id="@+id/btnMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_message"
+                android:background="@drawable/btnorange"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                />
+            <Button
+                android:id="@+id/btnBeli"
+                android:text="Beli Sekarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:background="@drawable/btnorange"
+                android:layout_toRightOf="@id/btnMessage"
+                android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

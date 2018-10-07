@@ -8,11 +8,13 @@ public class DaftarIkan {
     private String namaIkan;
     private int imgIkan;
     private int hargaIkan;
+    private int stock;
 
-    public DaftarIkan(String namaIkan, int imgIkan, int hargaIkan) {
+    public DaftarIkan(String namaIkan, int imgIkan, int hargaIkan, int stock) {
         this.namaIkan = namaIkan;
         this.imgIkan = imgIkan;
         this.hargaIkan = hargaIkan;
+        this.stock = stock;
     }
 
     public String getNamaIkan() {
@@ -37,5 +39,13 @@ public class DaftarIkan {
 
     public void setHargaIkan(int hargaIkan) {
         this.hargaIkan = hargaIkan;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }

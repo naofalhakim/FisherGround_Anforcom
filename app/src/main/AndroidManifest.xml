@@ -25,17 +25,23 @@
             android:name=".introLoginActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".HomeUserActivity" />
-        <!-- <<<<<<< HEAD -->
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity
+            android:name=".Fragment.HomeUser.DetailJual"
+            android:label="Detail Ikan"
+            android:theme="@style/AppThemeDefault"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Fragment.Investasi.DetailInvestasi"
+            android:label="Detail Investasi"
+            android:theme="@style/AppThemeDefault" />
+        <activity android:name=".Fragment.HomeUser.MessageActivity"
+            android:label="Message"
+            android:theme="@style/AppThemeDefault"/>
+        <activity android:name=".Fragment.HomeUser.BayarActivity"
+            android:label="Transaksi"
+            android:theme="@style/AppThemeDefault"></activity>
 
         <activity android:name=".LogTransaksiActivity" />
-        <!-- ======= -->
-        <activity android:name=".Fragment.HomeUser.DetailJual" />
-        <activity android:name=".Fragment.Investasi.DetailInvestasi" />
-        <!-- &gt;>>>>>> abc2120c8bde36e116727cb3702d053f986b2365 -->
         <activity android:name=".DetailPenjualanActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ChatActivity"></activity>
