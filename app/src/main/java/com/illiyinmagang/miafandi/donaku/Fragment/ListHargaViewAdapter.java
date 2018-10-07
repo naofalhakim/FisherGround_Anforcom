@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.illiyinmagang.miafandi.donaku.IkanJual;
+import com.illiyinmagang.miafandi.donaku.model.IkanJual;
 import com.illiyinmagang.miafandi.donaku.R;
 
 import java.util.List;

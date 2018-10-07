@@ -40,6 +40,11 @@
         <activity android:name=".Fragment.HomeUser.BayarActivity"
             android:label="Transaksi"
             android:theme="@style/AppThemeDefault"></activity>
+
+        <activity android:name=".LogTransaksiActivity" />
+        <activity android:name=".DetailPenjualanActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>

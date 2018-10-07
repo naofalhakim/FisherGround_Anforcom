@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment">
+
+    <LinearLayout
+        android:id="@+id/form_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Cari Transaksi Nama atau Nomor Telephone"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Filter sama"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_hargaIkan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_list_ikanjual"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+</LinearLayout>
