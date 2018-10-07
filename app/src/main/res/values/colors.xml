@@ -12,6 +12,7 @@
     <color name="btnGreyText">#96989E</color>
     <color name="grey">#dedede</color>
     <color name="tool">#A6D8E2</color>
+    <color name="txtHijau">#18AD71</color>
 
     <!-- For Dot -->
     <color name="dot_dark_screen1">#039BE5</color>
