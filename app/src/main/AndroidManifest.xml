@@ -36,7 +36,8 @@
         <activity android:name=".Fragment.HomeUser.DetailJual" />
         <activity android:name=".Fragment.Investasi.DetailInvestasi" />
         <!-- &gt;>>>>>> abc2120c8bde36e116727cb3702d053f986b2365 -->
-        <activity android:name=".DetailPenjualanActivity"></activity>
+        <activity android:name=".DetailPenjualanActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

@@ -57,8 +57,7 @@ public class DaftarPenjualanFragment extends Fragment {
             recyclerView.setAdapter(new DaftarPermintaanViewAdapter(penjualans,getContext()));
             linearLayout.setVisibility(View.INVISIBLE);
         }
-
-
+        
         return rootView;
     }
 
