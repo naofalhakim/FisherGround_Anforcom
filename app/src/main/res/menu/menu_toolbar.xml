@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
         <item
-            android:id="@+id/miCompose"
+            android:id="@+id/miMessage"
             android:icon="@drawable/ic_message"
             app:showAsAction="ifRoom"
             android:title="Message">
         </item>
         <item
-            android:id="@+id/miProfile"
+            android:id="@+id/miNotif"
             android:icon="@drawable/ic_notification"
             app:showAsAction="ifRoom|withText"
             android:title="Notification">

@@ -58,8 +58,8 @@ public class ChatActivity extends AppCompatActivity {
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etNamaBi.setText("");
                 pesans.add(new Pesan(1,etNamaBi.getText().toString(),currentTime.toString()));
+                etNamaBi.setText("");
                 recyclerView.setAdapter(new MyChatRecyclerViewAdapter(pesans,ChatActivity.this));
             }
         });

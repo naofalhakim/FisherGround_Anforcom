@@ -14,11 +14,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment;
 import com.illiyinmagang.miafandi.donaku.Fragment.LihatDaganganFragment;
@@ -182,4 +184,22 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.miMessage:
+                startActivity(new Intent(HomeActivity.this,ChatActivity.class));
+                return true;
+
+            case R.id.miNotif:
+                Toast.makeText(HomeActivity.this,"Tidak Ada Notifikasi Yang Baru", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
 }
