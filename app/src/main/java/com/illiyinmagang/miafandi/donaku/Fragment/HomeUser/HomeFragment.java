@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbarPelanggan);
+        toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbar);
         Appbar = (AppBarLayout)rootView.findViewById(R.id.MyAppbar);
         CoolToolbar = (CollapsingToolbarLayout) rootView.findViewById(R.id.MyCollapseToolbar);
 
@@ -84,7 +84,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        toolbar.setTitle("FISHER GROUND");
+        toolbar.setTitle("");
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         //toolbar.setBackgroundColor(Color.parseColor("#0277BD"));
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);

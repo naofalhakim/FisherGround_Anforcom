@@ -38,7 +38,7 @@ public class InvestasiFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_investasi, container, false);
 
         toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbar);
-        toolbar.setTitle("Investasi");
+        toolbar.setTitle("");
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
         //toolbar.setBackgroundColor(Color.parseColor("#0277BD"));
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);

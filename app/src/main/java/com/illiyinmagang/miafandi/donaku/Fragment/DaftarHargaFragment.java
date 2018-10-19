@@ -1,13 +1,23 @@
 package com.illiyinmagang.miafandi.donaku.Fragment;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.illiyinmagang.miafandi.donaku.ChatActivity;
 import com.illiyinmagang.miafandi.donaku.model.IkanJual;
 import com.illiyinmagang.miafandi.donaku.R;
 
@@ -16,10 +26,17 @@ import java.util.List;
 
 public class DaftarHargaFragment extends Fragment {
 
-    public DaftarHargaFragment() {
+    private String lol;
+
+    @SuppressLint("ValidFragment")
+    public DaftarHargaFragment(String lol) {
         // Required empty public constructor
+        this.lol = lol;
     }
 
+    public DaftarHargaFragment() {
+        this.lol = "pool";
+    }
 
     public static DaftarHargaFragment newInstance() {
         DaftarHargaFragment fragment = new DaftarHargaFragment();
@@ -30,6 +47,7 @@ public class DaftarHargaFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private List<IkanJual> ikanJuals;
+    private Toolbar toolbar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +55,17 @@ public class DaftarHargaFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_daftar_harga, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.list_hargaIkan);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbar);
+
+        if(lol.equals("lol")){
+            toolbar.setTitle("");
+            toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
+            //toolbar.setBackgroundColor(Color.parseColor("#0277BD"));
+            ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        }else{
+            toolbar.setVisibility(View.GONE);
+        }
+
 
         ikanJuals = new ArrayList();
         ikanJuals.add(new IkanJual(1, "Ikan Tongkol", 22000, 20000, 21000, R.drawable.itongkol));

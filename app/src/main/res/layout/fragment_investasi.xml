@@ -12,15 +12,59 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/MyToolbar"
-            android:background="@color/colorPrimaryDark"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/MyToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mask"
+                        android:layout_marginRight="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/img_profile"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semarang, Indonesia"
+                        android:layout_below="@id/txt_nama"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/img_profile"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/MyToolbar"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
             <android.support.v7.widget.RecyclerView
                 android:layout_below="@+id/MyToolbar"

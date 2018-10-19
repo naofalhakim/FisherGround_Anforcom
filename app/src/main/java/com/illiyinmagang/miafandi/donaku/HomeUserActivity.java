@@ -1,11 +1,14 @@
 package com.illiyinmagang.miafandi.donaku;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.support.design.widget.BottomNavigationView;
+import android.widget.Toast;
 
 import com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment;
 import com.illiyinmagang.miafandi.donaku.Fragment.HomeUser.HomeFragment;
@@ -50,7 +53,7 @@ public class HomeUserActivity extends AppCompatActivity implements BottomNavigat
                 fragment = new HomeFragment();
                 break;
             case R.id.btmNavDaftarHarga:
-                fragment = new DaftarHargaFragment();
+                fragment = new DaftarHargaFragment("lol");
                 break;
             case R.id.btmNavRequest:
                 fragment = new RequestFragment();
@@ -63,5 +66,31 @@ public class HomeUserActivity extends AppCompatActivity implements BottomNavigat
                 break;
         }
         return loadFragment(fragment);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.miMessage:
+                startActivity(new Intent(this.getApplicationContext(),ChatActivity.class));
+                return true;
+
+            case R.id.miNotif:
+                Toast.makeText(this.getApplicationContext(),"Tidak Ada Notifikasi Yang Baru", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }

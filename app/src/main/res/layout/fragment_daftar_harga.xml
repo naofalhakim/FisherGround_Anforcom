@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.illiyinmagang.miafandi.donaku.Fragment.DaftarHargaFragment">
+
     <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,30 +13,82 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/txt_tanggal_ikan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="harga per 28 Agustus 2018"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/list_hargaIkan"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/MyToolbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/item_list_ikanjual"
-                android:paddingRight="30dp"
-                android:paddingLeft="30dp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
                 >
 
-            </android.support.v7.widget.RecyclerView>
-        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mask"
+                        android:layout_marginRight="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_nama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/img_profile"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semarang, Indonesia"
+                        android:layout_below="@id/txt_nama"
+                        android:textColor="@color/white"
+                        android:layout_toRightOf="@id/img_profile"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_tanggal_ikan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="harga per 28 Agustus 2018"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_hargaIkan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_list_ikanjual"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_below="@id/txt_tanggal_ikan"
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+        </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
