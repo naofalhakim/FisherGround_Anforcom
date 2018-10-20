@@ -18,13 +18,16 @@ import com.illiyinmagang.miafandi.donaku.R;
 
 public class DetailJual extends AppCompatActivity {
     public ImageView fishPict;
-    public TextView fishName, add, count, minus,kurirTersedia;
+    public TextView fishName, add, count, minus,kurirTersedia, txtTotalIkan, txtOngkir, txtTotalBayar;
     public TextView fishPrice;
     public TextView fishStock;
     private ImageView btnMessage;
     private Button btnPesan;
     private RelativeLayout kurir;
     int jumlah = 1;
+    int c = 0;
+    int tot = 0;
+    int ongkosKirim=0;
     RadioButton rb1,rb2,rb3,rb4;
     int checkedRadioButton = 0;
     String kurirDipilih;
@@ -76,19 +79,32 @@ public class DetailJual extends AppCompatActivity {
         fishStock = (TextView) findViewById(R.id.stock);
         btnMessage = (ImageView) findViewById(R.id.btnMessage);
         btnPesan = (Button) findViewById(R.id.btnBeli);
+        txtTotalIkan = (TextView) findViewById(R.id.txtHargaIkan);
+        txtOngkir = (TextView) findViewById(R.id.txtOngkos);
+        txtTotalBayar = (TextView) findViewById(R.id.txtTotalBiaya);
 
         final Intent i = getIntent();
         final String nama = i.getStringExtra("namaIkan");
         final int gambar = i.getIntExtra("gambarIkan",0);
         final String harga = i.getStringExtra("hargaIkan");
         final String stock = i.getStringExtra("stockIkan");
-        int c = Integer.parseInt(harga)*1000;
+        c = Integer.parseInt(harga)*1000;
+        ongkosKirim = 0;
 
 
         fishPict.setImageResource(gambar);
         fishName.setText(nama);
         fishStock.setText(stock);
         fishPrice.setText(Integer.toString(c));
+
+        tot = c * jumlah;
+        txtTotalIkan.setText(Integer.toString(tot));
+        txtOngkir.setText(Integer.toString(ongkosKirim));
+        txtTotalBayar.setText(Integer.toString(tot+ongkosKirim));
+
+//        txtTotalBayar.setText(Integer.toString(c));
+//        txtOngkir.setText(Integer.toString(ongkosKirim));
+//        txtTotalBayar.setText(Integer.toString(c+ongkosKirim));
 
         btnMessage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,7 +129,8 @@ public class DetailJual extends AppCompatActivity {
             public void onClick(View v) {
                 jumlah++;
                 count.setText(String.valueOf(jumlah));
-
+                txtTotalIkan.setText(Integer.toString(tot*jumlah));
+                txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
 //                pesanTotalHarga.setText(String.valueOf(jumlah*hargaAsli));
 //                pesanTotal.setText(String.valueOf(((jumlah*hargaAsli))+kirim));
             }
@@ -122,10 +139,12 @@ public class DetailJual extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(jumlah>=1) {
+                if(jumlah>1) {
                     jumlah--;
                     count.setText(String.valueOf(jumlah));
                 }
+                txtTotalIkan.setText(Integer.toString(tot*jumlah));
+                txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
 //                pesanTotalHarga.setText(String.valueOf(jumlah*hargaAsli));
 //                pesanTotal.setText(String.valueOf(((jumlah*hargaAsli))+kirim));
             }
@@ -155,8 +174,18 @@ public class DetailJual extends AppCompatActivity {
                 pilih.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        if (getOption().equals("Ambil Sendiri")){
+                            ongkosKirim = 0;
+                        }else if (getOption().equals("Dikirim Nelayan")){
+                            ongkosKirim = 30000;
+                        }else{
+                            ongkosKirim = 50000;
+                        }
                         kurirDipilih = getOption();
                         kurirTersedia.setText(kurirDipilih);
+                        txtOngkir.setText(Integer.toString(ongkosKirim));
+                        txtTotalIkan.setText(Integer.toString(tot*jumlah));
+                        txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
                         dialog.dismiss();
                     }
                 });

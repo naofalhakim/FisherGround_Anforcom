@@ -5,6 +5,8 @@
     android:gravity="center_horizontal"
     android:elevation="3dp"
     android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
     >
 
     <RelativeLayout
@@ -24,42 +26,46 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/titleDialog"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/imageMix"
-        android:id="@+id/titleMasakan"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Ikan Dijual Berhasil"
+        android:text="Request Ikan Berhasil"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:textColor="@color/btnGreyText"
+        android:textColor="@color/primaryText"
         />
 
     <TextView
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/titleMasakan"
-        android:id="@+id/contentMasakan"
+        android:layout_below="@+id/titleDialog"
+        android:id="@+id/contentDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Terimakasih sudah menambahkan hasil tangkapan anda, Semoga Sukses."
-        android:textStyle="bold"
-        android:textSize="16sp"
+        android:text="Terimakasih telah melakukan request ikan pada aplikasi. Tunggu nelayan yang akan menghubungi anda."
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:textColor="@color/textMain"
         />
 
     <Button
-        android:layout_below="@+id/contentMasakan"
-        android:id="@+id/btnOk"
+        android:layout_below="@+id/contentDialog"
+        android:id="@+id/btnLanjutkan"
         android:layout_width="200dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_height="wrap_content"
-        android:text="OK"
+        android:text="Lanjutkan"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_accentsquare"
+        android:background="@drawable/btnorange"
         android:layout_marginTop="18dp"
+        android:elevation="2dp"
+        android:textColor="@color/white"
         />
 
 

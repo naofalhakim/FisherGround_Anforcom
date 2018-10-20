@@ -37,6 +37,7 @@ public class ListHargaViewAdapter extends RecyclerView.Adapter<ListHargaViewAdap
     @Override
     public void onBindViewHolder(@NonNull ListHargaViewAdapter.ViewHolder holder, int position) {
         holder.ikanJual = ikanJuals.get(position);
+        holder.imgIkan.setImageResource(holder.ikanJual.getImage());
         holder.txtNamaIkan.setText(holder.ikanJual.getNama());
         holder.txtHargaIkan.setText("Rp "+holder.ikanJual.getHarga()+" / kg");
 

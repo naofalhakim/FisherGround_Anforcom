@@ -226,12 +226,101 @@
                     />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardBiaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="2dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/cardKurir">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Ikan"
+                        android:textColor="@color/primaryText"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/txtHargaIkan"
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/two"
+                    android:layout_below="@+id/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ongkos Pengiriman"
+                        android:textColor="@color/primaryText"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/txtOngkos"
+                        android:text="20.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/three"
+                    android:layout_below="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ongkos Pengiriman"
+                        android:textColor="@color/primaryText"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/txtTotalBiaya"
+                        android:text="20.000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
         <RelativeLayout
-            android:layout_below="@+id/cardKurir"
+            android:layout_below="@+id/cardBiaya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            >
             <ImageView
                 android:id="@+id/btnMessage"
                 android:layout_width="wrap_content"

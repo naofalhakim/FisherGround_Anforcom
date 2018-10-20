@@ -9,8 +9,8 @@
         android:id="@+id/list_hargaIkan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         >

@@ -69,17 +69,17 @@ public class DaftarHargaFragment extends Fragment {
 
         ikanJuals = new ArrayList();
         ikanJuals.add(new IkanJual(1, "Ikan Tongkol", 22000, 20000, 21000, R.drawable.itongkol));
-        ikanJuals.add(new IkanJual(2, "Cumi-Cumi", 45000, 20000, 43000, R.drawable.icumi));
-        ikanJuals.add(new IkanJual(2, "Gurita", 35000, 20000, 32000, R.drawable.igurita));
-        ikanJuals.add(new IkanJual(2, "Kakap Merah", 60000, 20000, 57000, R.drawable.ikakap));
-        ikanJuals.add(new IkanJual(2, "Ikan Kembung", 25000, 20000, 22000, R.drawable.ikembung));
-        ikanJuals.add(new IkanJual(2, "Kepiting", 55000, 20000, 50000, R.drawable.ikepiting));
-        ikanJuals.add(new IkanJual(2, "Kerang", 15000, 20000, 12000, R.drawable.ikerang));
-        ikanJuals.add(new IkanJual(2, "Patin", 35000, 20000, 34000, R.drawable.ipatin));
-        ikanJuals.add(new IkanJual(2, "Udang", 35000, 20000, 33000, R.drawable.iudang));
-        ikanJuals.add(new IkanJual(2, "Gurami", 45000, 20000, 40000, R.drawable.igurame));
-        ikanJuals.add(new IkanJual(2, "Kerang Hijau", 20000, 20000, 18000, R.drawable.ikeranghijau));
-        ikanJuals.add(new IkanJual(2, "Lobster", 85000, 20000, 80000, R.drawable.ilobster));
+        ikanJuals.add(new IkanJual(2, "Cumi-Cumi", 45000, 43000, 43000, R.drawable.icumi));
+        ikanJuals.add(new IkanJual(3, "Gurita", 35000, 32000, 32000, R.drawable.igurita));
+        ikanJuals.add(new IkanJual(4, "Kakap Merah", 60000, 57000, 57000, R.drawable.ikakap));
+        ikanJuals.add(new IkanJual(5, "Ikan Kembung", 25000, 22000, 22000, R.drawable.ikembung));
+        ikanJuals.add(new IkanJual(6, "Kepiting", 55000, 50000, 50000, R.drawable.ikepiting));
+        ikanJuals.add(new IkanJual(7, "Kerang", 15000, 12000, 12000, R.drawable.ikerang));
+        ikanJuals.add(new IkanJual(8, "Patin", 35000, 34000, 34000, R.drawable.ipatin));
+        ikanJuals.add(new IkanJual(9, "Udang", 35000, 33000, 33000, R.drawable.iudang));
+        ikanJuals.add(new IkanJual(10, "Gurami", 45000, 40000, 40000, R.drawable.igurame));
+        ikanJuals.add(new IkanJual(11, "Kerang Hijau", 20000, 18000, 18000, R.drawable.ikeranghijau));
+        ikanJuals.add(new IkanJual(12, "Lobster", 85000, 80000, 80000, R.drawable.ilobster));
 
 
 

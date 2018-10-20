@@ -2,8 +2,6 @@ package com.illiyinmagang.miafandi.donaku.RealmCOnfig;
 
 import android.app.Application;
 
-import com.facebook.stetho.Stetho;
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 

@@ -25,12 +25,14 @@ public class InvestasiAdapter extends RecyclerView.Adapter<InvestasiAdapter.View
 //        super();
         this.context = context;
         listInvestasi = new ArrayList<InvestasiUser>();
-        listInvestasi.add(new InvestasiUser(R.drawable.iv1,"Peremajaan Kapal","Rudi Habibi","Banyuwangi",2,10,3000000));
-        listInvestasi.add(new InvestasiUser(R.drawable.iv2,"Keramba Tuna","Rudi Habibi","Banyuwangi",2,10,3000000));
-        listInvestasi.add(new InvestasiUser(R.drawable.iv1,"Peremajaan Kapal","Rudi Habibi","Banyuwangi",2,10,3000000));
-        listInvestasi.add(new InvestasiUser(R.drawable.iv2,"Keramba Tuna","Rudi Habibi","Banyuwangi",2,10,3000000));
-        listInvestasi.add(new InvestasiUser(R.drawable.iv1,"Peremajaan Kapal","Rudi Habibi","Banyuwangi",2,10,3000000));
-        listInvestasi.add(new InvestasiUser(R.drawable.iv2,"Keramba Tuna","Rudi Habibi","Banyuwangi",2,10,3000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.iv2,"Peremajaan Kapal","Rudi Habibi","Banyuwangi",1,10,3000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.iv1,"Keramba Tuna","Bambang Hendrawan","Pengandaran",0,15,7500000));
+        listInvestasi.add(new InvestasiUser(R.drawable.investtambak,"Tambak Udang","Irwan Suwardi","Bodowoso",1,20,20000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.unvestkapal,"Pembuatan Kapal 10GT","Naofal Perdana","Sendang Biru",0,12,8000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.iv2,"Peremajaan Kapal","Rudi Habibi","Banyuwangi",1,10,3000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.iv1,"Keramba Tuna","Bambang Hendrawan","Pengandaran",0,15,7500000));
+        listInvestasi.add(new InvestasiUser(R.drawable.investtambak,"Tambak Udang","Irwan Suwardi","Bodowoso",1,20,20000000));
+        listInvestasi.add(new InvestasiUser(R.drawable.unvestkapal,"Pembuatan Kapal 10GT","Naofal Perdana","Sendang Biru",0,12,8000000));
     }
 
     @Override

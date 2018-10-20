@@ -18,7 +18,7 @@
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="160dp"
                 android:id="@+id/imgInvestasi"
                 android:src="@drawable/iv1"
                 android:paddingLeft="7dp"
@@ -87,16 +87,20 @@
                         android:text="0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
+
                     <TextView
                         android:id="@+id/a2"
-                        android:text="/"
-                        android:layout_toRightOf="@id/txtdonatur"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toEndOf="@+id/a1"
+                        android:layout_toRightOf="@+id/a1"
+                        android:text="/" />
                     <TextView
                         android:layout_toRightOf="@+id/a2"
                         android:id="@+id/txtxTotalDonatur"
-                        android:text="3"
+                        android:text="5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
@@ -109,7 +113,7 @@
                         android:textColor="@color/white"
                         android:layout_alignParentRight="true"
                         android:background="@drawable/btnblue"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="20dp"
                         android:paddingLeft="9dp"
                         android:paddingRight="9dp"
                         android:paddingBottom="4dp"
@@ -121,7 +125,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="-18dp">
+                    android:layout_marginTop="-15dp"
+                    >
                     <TextView
                         android:id="@+id/txtroi"
                         android:text="ROI: "
@@ -139,6 +144,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="-34dp"
+                    android:layout_below="@+id/kuota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Durasi Investasi : 2 Bulan"/>
             </RelativeLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
