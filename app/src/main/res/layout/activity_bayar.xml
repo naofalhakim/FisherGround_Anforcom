@@ -1,18 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment.HomeUser.BayarActivity">
-
-    <ImageView
-        android:id="@+id/imgbayar"
-        android:src="@drawable/bayar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/bayarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Penerima"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"/>
+    <EditText
+        android:id="@+id/txtBayarNama"
+        android:layout_below="@+id/txtnama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13dp"
+        android:hint="Masukkan nama..."/>
+
+    <TextView
+        android:id="@+id/txttlp"
+        android:layout_below="@+id/txtBayarNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kontak"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"/>
+    <EditText
+        android:id="@+id/txtBayarTlp"
+        android:layout_below="@+id/txttlp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13dp"
+        android:hint="Masukkan kontak..."/>
+    <TextView
+        android:id="@+id/txtalamat"
+        android:layout_below="@+id/txtBayarTlp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"/>
+    <EditText
+        android:id="@+id/txtBayarAlamat"
+        android:layout_below="@+id/txtalamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13dp"
+        android:lines="3"
+        android:hint="Masukkan Alamat..."/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/bayarDetail"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/titleX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank account yang anda pakai?"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText" />
+
+        <iammert.com.expandablelib.ExpandableLayout
+            android:layout_below="@+id/titleX"
+            android:id="@+id/expandable_layout"
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:parentLayout="@layout/layout_parent"
+            app:childLayout="@layout/layout_child">
+
+        </iammert.com.expandablelib.ExpandableLayout>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/cardBayar"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/titleY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Belanjaan Anda"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryText" />
+
+            <RelativeLayout
+                android:id="@+id/ikan"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/titleY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Total Harga Ikan"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/txtHargaIkanBayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="6000000"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/txtHargaIkanBayar"
+                    android:text="Rp "
+                    android:layout_marginRight="3dp"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/pos"
+                android:layout_below="@+id/ikan"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Biaya Kirim"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtHargaKirimBayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:text="50000"
+                    android:textSize="13sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/txtHargaKirimBayar"
+                    android:text="Rp "
+                    android:layout_marginRight="3dp"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/pos"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Total Belanja"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txtHargaTotalBayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="6050000"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/txtHargaTotalBayar"
+                    android:text="Rp "
+                    android:layout_marginRight="3dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
     <Button
-        android:layout_below="@id/imgbayar"
+        android:layout_below="@id/total"
         android:id="@+id/btnBayar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +221,8 @@
         android:paddingRight="60dp"
         android:paddingBottom="5dp"
         android:paddingTop="5dp"
-        android:layout_centerHorizontal="true"/>
-
-
-</RelativeLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+</ScrollView>

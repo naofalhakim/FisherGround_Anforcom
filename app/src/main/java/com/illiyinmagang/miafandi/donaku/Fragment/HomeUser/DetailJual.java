@@ -30,7 +30,7 @@ public class DetailJual extends AppCompatActivity {
     int ongkosKirim=0;
     RadioButton rb1,rb2,rb3,rb4;
     int checkedRadioButton = 0;
-    String kurirDipilih;
+    String kurirDipilih,a1,a2,a3;
 
     private RadioGroup.OnCheckedChangeListener checkedChangeListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
@@ -90,7 +90,7 @@ public class DetailJual extends AppCompatActivity {
         final String stock = i.getStringExtra("stockIkan");
         c = Integer.parseInt(harga)*1000;
         ongkosKirim = 0;
-
+        a3 = Integer.toString(ongkosKirim);
 
         fishPict.setImageResource(gambar);
         fishName.setText(nama);
@@ -113,16 +113,11 @@ public class DetailJual extends AppCompatActivity {
             }
         });
 
-        btnPesan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DetailJual.this,BayarActivity.class));
-            }
-        });
-
         add = (TextView) findViewById(R.id.increment);
         count = (TextView) findViewById(R.id.count);
         minus = (TextView) findViewById(R.id.decrement);
+        a1 = Integer.toString(tot*jumlah);
+        a2 = Integer.toString(Integer.parseInt(harga)+ongkosKirim);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +126,8 @@ public class DetailJual extends AppCompatActivity {
                 count.setText(String.valueOf(jumlah));
                 txtTotalIkan.setText(Integer.toString(tot*jumlah));
                 txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
+                a1 = Integer.toString(tot*jumlah);
+                a2 = Integer.toString((tot*jumlah)+ongkosKirim);
 //                pesanTotalHarga.setText(String.valueOf(jumlah*hargaAsli));
 //                pesanTotal.setText(String.valueOf(((jumlah*hargaAsli))+kirim));
             }
@@ -145,6 +142,8 @@ public class DetailJual extends AppCompatActivity {
                 }
                 txtTotalIkan.setText(Integer.toString(tot*jumlah));
                 txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
+                a1 = Integer.toString(tot*jumlah);
+                a2 = Integer.toString((tot*jumlah)+ongkosKirim);
 //                pesanTotalHarga.setText(String.valueOf(jumlah*hargaAsli));
 //                pesanTotal.setText(String.valueOf(((jumlah*hargaAsli))+kirim));
             }
@@ -186,9 +185,21 @@ public class DetailJual extends AppCompatActivity {
                         txtOngkir.setText(Integer.toString(ongkosKirim));
                         txtTotalIkan.setText(Integer.toString(tot*jumlah));
                         txtTotalBayar.setText(Integer.toString((tot*jumlah)+ongkosKirim));
+                        a2 = Integer.toString((tot*jumlah)+ongkosKirim);
+                        a3 = Integer.toString(ongkosKirim);
                         dialog.dismiss();
                     }
                 });
+            }
+        });
+        btnPesan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailJual.this,BayarActivity.class);
+                intent.putExtra("hargaIkan",a1);
+                intent.putExtra("hargaPos",a3);
+                intent.putExtra("hargaTotal",a2);
+                startActivity(intent);
             }
         });
     }

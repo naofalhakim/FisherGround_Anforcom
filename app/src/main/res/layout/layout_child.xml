@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pembayaran dapat dilakukan melalui transfer ke rekening virtual account  BCA (0221-455654-7321 FisherNets)"/>
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_below="@id/txt1"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ketentuan pembayaran: "/>
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_below="@id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Satu nomor virtual account hanya berlaku untuk satu nomor. "/>
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_below="@id/txt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Pembayaran dengan virtual account hanya berlaku untuk satu tagihan terbaru."/>
+
+</RelativeLayout>
