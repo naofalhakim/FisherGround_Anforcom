@@ -12,16 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         app:layout_collapseMode="pin" />
+
     <TextView
         android:id="@+id/txtSelamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="FISHER GROUND"
+        android:text="FISHER NETS"
         android:textColor="@color/white"
         android:textSize="17dp"
-        android:layout_marginTop="60dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/txtMasuk"
         android:layout_below="@+id/txtSelamat"

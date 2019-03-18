@@ -113,12 +113,12 @@
         android:id="@+id/txtKebijakan"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="Dengan menggunakan FISHER GROUND, anda menyetuji peraturan layanan dan kebijakan privasi."
+        android:text="Dengan menggunakan FISHER NETS, anda menyetuji peraturan layanan dan kebijakan privasi."
         android:textColor="@color/grey"
-        android:textSize="11dp"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="11dp" />
 
 </RelativeLayout>

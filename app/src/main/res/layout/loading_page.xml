@@ -14,16 +14,17 @@
         android:src="@drawable/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp" />
+
     <TextView
         android:id="@+id/nameApp"
-        android:text="FISHER GROUND"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
-        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
+        android:text="FISHER NETS"
+        android:textColor="@color/white"
         android:textSize="25dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
     <LinearLayout
         android:layout_below="@+id/nameApp"
         android:layout_width="wrap_content"
