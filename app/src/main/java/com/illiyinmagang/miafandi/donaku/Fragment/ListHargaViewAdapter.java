@@ -37,10 +37,14 @@ public class ListHargaViewAdapter extends RecyclerView.Adapter<ListHargaViewAdap
     @Override
     public void onBindViewHolder(@NonNull ListHargaViewAdapter.ViewHolder holder, int position) {
         holder.ikanJual = ikanJuals.get(position);
-        holder.imgIkan.setImageResource(holder.ikanJual.getImage());
+        if(holder.ikanJual.getImage() != 0){
+            holder.imgIkan.setImageResource(holder.ikanJual.getImage());
+        }else{
+            holder.imgIkan.setImageResource(R.drawable.ikan1);
+        }
         holder.txtNamaIkan.setText(holder.ikanJual.getNama());
         holder.txtHargaIkan.setText("Rp "+holder.ikanJual.getHarga()+" / kg");
-
+        holder.txtQuota.setText("Jumlah Quota Tersisa : "+holder.ikanJual.getQuota()+" Kg");
     }
 
     @Override
@@ -50,7 +54,7 @@ public class ListHargaViewAdapter extends RecyclerView.Adapter<ListHargaViewAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imgIkan, imgProceSign;
-        TextView txtNamaIkan, txtHargaIkan, txtHargaNaik;
+        TextView txtNamaIkan, txtHargaIkan, txtHargaNaik, txtQuota;
         IkanJual ikanJual;
 
         public ViewHolder(View itemView) {
@@ -61,6 +65,7 @@ public class ListHargaViewAdapter extends RecyclerView.Adapter<ListHargaViewAdap
             txtHargaIkan = (TextView) itemView.findViewById(R.id.txt_harga_ikan);
             txtNamaIkan = (TextView) itemView.findViewById(R.id.txt_nama_ikan);
             txtHargaNaik = (TextView) itemView.findViewById(R.id.txt_harganaik_ikan);
+            txtQuota = (TextView) itemView.findViewById(R.id.txt_quota);
 
         }
     }

@@ -32,18 +32,18 @@ public class LoginActivity extends AppCompatActivity {
                 user = xusername.getText().toString();
                 pass= xpassword.getText().toString();
 
-                Toast.makeText(LoginActivity.this,user+" pass "+pass,Toast.LENGTH_LONG).show();
-                if(user.equals("") && pass.equals("")){
-                    Toast.makeText(LoginActivity.this,"Tolong isi username dan password",Toast.LENGTH_LONG).show();
-                }else if (user.equals("a") && pass.equals("a")){
-                    Intent intent= new Intent(LoginActivity.this, HomeUserActivity.class);
-                    startActivity(intent);
-                }else if(user.equals("nelayan") && pass.equals("nelayan")){
+//                Toast.makeText(LoginActivity.this,user+" pass "+pass,Toast.LENGTH_LONG).show();
+//                if(user.equals("") && pass.equals("")){
+//                    Toast.makeText(LoginActivity.this,"Tolong isi username dan password",Toast.LENGTH_LONG).show();
+//                }else if (user.equals("a") && pass.equals("a")){
+//                    Intent intent= new Intent(LoginActivity.this, HomeUserActivity.class);
+//                    startActivity(intent);
+//                }else if(user.equals("nelayan") && pass.equals("nelayan")){
                     Intent intent= new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(LoginActivity.this,"Tolong isi username dan password",Toast.LENGTH_LONG).show();
-                }
+//                }else{
+//                    Toast.makeText(LoginActivity.this,"Tolong isi username dan password",Toast.LENGTH_LONG).show();
+//                }
             }
         });
     }

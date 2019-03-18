@@ -66,7 +66,9 @@ public class DaftarPenjualanViewAdapter extends RecyclerView.Adapter<DaftarPenju
 
         @Override
         public void onClick(View v) {
-            context.startActivity(new Intent(context, DetailPenjualanActivity.class));
+            Intent i = new Intent(context, DetailPenjualanActivity.class);
+            i.putExtra("sign",txtDeail.getText().toString());
+            context.startActivity(i);
         }
     }
 }

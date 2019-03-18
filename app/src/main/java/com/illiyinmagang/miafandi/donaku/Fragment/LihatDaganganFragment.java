@@ -45,11 +45,18 @@ public class LihatDaganganFragment extends Fragment {
         floatingActionButton = (FloatingActionButton) rootView.findViewById(R.id.fab);
 
         ikanJuals = new ArrayList();
-            ikanJuals.add(new IkanJual(1, "Ikan Tongkol", 22000, 20000, 21000, R.drawable.itongkol));
-            ikanJuals.add(new IkanJual(2, "Kakap Merah", 60000, 57000, 57000, R.drawable.ikakap));
-            ikanJuals.add(new IkanJual(3, "Kepiting", 55000, 50000, 50000, R.drawable.ikepiting));
-            ikanJuals.add(new IkanJual(4, "Kerang Hijau", 20000, 18000, 18000, R.drawable.ikeranghijau));
-            ikanJuals.add(new IkanJual(5, "Cumi-Cumi", 45000, 43000, 43000, R.drawable.icumi));
+
+//        for (int i = 0; i < 7; i++) {
+//            ikanJuals.add(new IkanJual(i, "Ikan Tuna", 45000,45000, 39000, 100000, R.drawable.ikan1, 40));
+//        }
+
+        ikanJuals.add(new IkanJual(0, "Ikan Tuna", 45000, 45000, 39000, R.drawable.ikan1,40));
+        ikanJuals.add(new IkanJual(1, "Ikan Tongkol", 22000, 20000, 21000, R.drawable.itongkol,20));
+        ikanJuals.add(new IkanJual(2, "Kakap Merah", 60000, 57000, 57000, R.drawable.ikakap,38));
+        ikanJuals.add(new IkanJual(3, "Kepiting", 55000, 50000, 50000, R.drawable.ikepiting,19));
+        ikanJuals.add(new IkanJual(4, "Kerang Hijau", 20000, 18000, 18000, R.drawable.ikeranghijau,30));
+        ikanJuals.add(new IkanJual(5, "Cumi-Cumi", 45000, 43000, 43000, R.drawable.icumi,22));
+
 
         recyclerView.setAdapter(new ListHargaViewAdapter(ikanJuals,getContext()));
 
@@ -61,8 +68,6 @@ public class LihatDaganganFragment extends Fragment {
         });
 
         return rootView;
-
-
 
     }
 }

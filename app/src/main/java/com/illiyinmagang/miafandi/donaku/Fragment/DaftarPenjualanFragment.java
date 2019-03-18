@@ -15,6 +15,7 @@ import com.illiyinmagang.miafandi.donaku.model.Penjualan;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DaftarPenjualanFragment extends Fragment {
 
@@ -42,23 +43,30 @@ public class DaftarPenjualanFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_daftar_penjualan, container, false);
         LinearLayout linearLayout = (LinearLayout) rootView.findViewById(R.id.form_search);
 
+        String[] myFish = getResources().getStringArray(R.array.IkanQu);
+        String[] myKonsumen = getResources().getStringArray(R.array.Konsumen);
+        String[] myTlp = getResources().getStringArray(R.array.TlpQu);
+        String[] myAdress = getResources().getStringArray(R.array.Address);
+
         recyclerView = (RecyclerView) rootView.findViewById(R.id.list_hargaIkan);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         penjualans = new ArrayList();
-        for (int i = 0; i < 3; i++) {
-            penjualans.add(new Penjualan(i, "Naofal","Ikan Kakap 10 Kg","0822", R.drawable.mask));
-        }
-
-        if(page.equals("Penjualan")){
-            recyclerView.setAdapter(new DaftarPenjualanViewAdapter(penjualans,getContext()));
+        if (page.equals("Penjualan")) {
+            for (int i = 0; i < 3; i++) {
+                penjualans.add(new Penjualan(i, myKonsumen[i], myFish[i], myTlp[i], R.drawable.mask));
+                penjualans.get(i).setWeight(new Random().nextInt(80) + 10);
+            }
+            recyclerView.setAdapter(new DaftarPenjualanViewAdapter(penjualans, getContext()));
             linearLayout.setVisibility(View.VISIBLE);
         }else{
+            for (int i = 0; i < 3; i++) {
+                penjualans.add(new Penjualan(i, myKonsumen[i],myAdress[i],myFish[i],myTlp[i], R.drawable.mask, new Random().nextInt(80)+10));
+            }
             recyclerView.setAdapter(new DaftarPermintaanViewAdapter(penjualans,getContext()));
-            linearLayout.setVisibility(View.INVISIBLE);
+            linearLayout.setVisibility(View.INVISIBLE);        }
+
+            return rootView;
         }
-        
-        return rootView;
-    }
 
 }

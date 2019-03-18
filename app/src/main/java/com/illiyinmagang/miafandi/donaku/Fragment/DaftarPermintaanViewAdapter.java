@@ -41,7 +41,10 @@ public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPerm
         viewHolder.penjualan = penjualans.get(i);
         viewHolder.imageView.setImageResource(R.drawable.ic_profil);
         viewHolder.txtNama.setText(viewHolder.penjualan.getNama());
+        viewHolder.txtTelp.setText(viewHolder.penjualan.getKtp());
         viewHolder.txtPesanan.setText(viewHolder.penjualan.getPesanan());
+        viewHolder.txtWeigth.setText(+viewHolder.penjualan.getWeight()+" Kg");
+        viewHolder.txtAddress.setText("Alamat : "+viewHolder.penjualan.getAlamat());
         viewHolder.txtDeail.setText("Konfirmasi");
     }
 
@@ -51,7 +54,7 @@ public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPerm
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private TextView txtNama, txtPesanan,txtDeail;
+        private TextView txtNama, txtPesanan,txtDeail, txtTelp, txtWeigth, txtAddress;
         private ImageView imageView;
         private Penjualan penjualan;
         public ViewHolder(@NonNull View itemView) {
@@ -59,13 +62,24 @@ public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPerm
             txtNama = (TextView) itemView.findViewById(R.id.txt_nama);
             txtPesanan = (TextView) itemView.findViewById(R.id.txt_jenis_ikan);
             txtDeail = (TextView) itemView.findViewById(R.id.txt_detail);
+            txtWeigth = (TextView) itemView.findViewById(R.id.txt_bobot_ikan);
+            txtTelp = (TextView) itemView.findViewById(R.id.txt_notelp_penerima);
+            txtAddress = (TextView) itemView.findViewById(R.id.txt_alamat_penerima);
+
             imageView = (ImageView) itemView.findViewById(R.id.img_orang);
             txtDeail.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-//            context.startActivity(new Intent(context, DetailPenjualanActivity.class));
+            Intent i = new Intent(context, DetailPenjualanActivity.class);
+            i.putExtra("nama",txtNama.getText().toString());
+            i.putExtra("pesanan",txtPesanan.getText().toString());
+            i.putExtra("bobot",txtWeigth.getText().toString());
+            i.putExtra("telp",txtTelp.getText().toString());
+            i.putExtra("alamat",txtAddress.getText().toString());
+            i.putExtra("sign",txtDeail.getText().toString());
+            context.startActivity(i);
         }
     }
 }

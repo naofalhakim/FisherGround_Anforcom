@@ -4,4 +4,46 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="notReq">harga untuk request ikan berbeda dengan harga pasaran, mungkin sedikit lebih mahal. Jika request tidak ada yang mengambil lebih dari 2 hari, Rrequest akan dihapus</string>
+
+    <string-array name="Konsumen">
+        <item>Resotran Podo Moro</item>
+        <item>Hotel Puyer Bintang 7</item>
+        <item>Hotel Awas Ranjau</item>
+        <item>Resotran Ramen Konoha</item>
+        <item>Karnivor</item>
+        <item>Restoran Bakso Akung</item>
+    </string-array>
+
+    <string-array name="Address">
+        <item>Jl. Gathotsubroto no.69, Madiun</item>
+        <item>Jl. Ir. Soekarno Hatta Block C1 no.23, Surabaya</item>
+        <item>Jl. KH Agus Salim no.35, Jombang</item>
+        <item>Jl. Dr. Soetomo Ruko no.51, Malang</item>
+    </string-array>
+
+    <string-array name="IkanQu">
+        <item>Ikan Tuna</item>
+        <item>Ikan Tongkol</item>
+        <item>Kakap Merah</item>
+        <item>Kepiting</item>
+        <item>Kerang Hijau</item>
+        <item>Cumi-Cumi</item>
+    </string-array>
+
+    <string-array name="TlpQu">
+        <item>082214119368</item>
+        <item>084561119965</item>
+        <item>085268619965</item>
+        <item>085268619937</item>
+        <item>082214119368</item>
+        <item>084561119965</item>
+        <item>085268619965</item>
+    </string-array>
+
+    <string-array name="MyLastChat">
+        <item>Pak Bagaimana ini saya sudah ada pesanananya ?</item>
+        <item>Kami sudah kirimkan hari selasa kemarin, mohon ditunggu saja</item>
+        <item>Baik pak terimakasih, kami tunggu pesanan selanjutnya</item>
+        <item>Bisa pak, kebetulan kami ada pesanan yang serupa</item>
+    </string-array>
 </resources>

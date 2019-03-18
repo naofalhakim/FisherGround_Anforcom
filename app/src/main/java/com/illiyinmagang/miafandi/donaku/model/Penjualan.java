@@ -7,9 +7,11 @@ package com.illiyinmagang.miafandi.donaku.model;
 public class Penjualan {
     private int id;
     private String nama;
+    private String alamat;
     private String pesanan;
     private String ktp;
     private int img;
+    private int weight;
 
     public int getId() {
         return id;
@@ -29,6 +31,41 @@ public class Penjualan {
 
     public String getPesanan() {
         return pesanan;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public Penjualan(String nama, String alamat, String pesanan, String ktp, int img, int weight) {
+        this.nama = nama;
+        this.alamat = alamat;
+        this.pesanan = pesanan;
+        this.ktp = ktp;
+        this.img = img;
+        this.weight = weight;
+    }
+
+    public Penjualan(int id, String nama, String alamat, String pesanan, String ktp, int img, int weight) {
+        this.id = id;
+        this.nama = nama;
+        this.alamat = alamat;
+        this.pesanan = pesanan;
+        this.ktp = ktp;
+        this.img = img;
+        this.weight = weight;
     }
 
     public void setPesanan(String pesanan) {

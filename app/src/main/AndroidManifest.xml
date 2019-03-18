@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Slider.SliderActivity" />
+        <activity android:name=".ContactListActivity"
+            android:theme="@style/AppThemeDefault"></activity>
         <activity
             android:name=".LoginActivity"
             android:windowSoftInputMode="adjustPan|adjustResize|adjustUnspecified" />
