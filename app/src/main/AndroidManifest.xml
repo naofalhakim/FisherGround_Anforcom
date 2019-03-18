@@ -50,7 +50,8 @@
         <activity android:name=".DetailPenjualanActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ChatActivity" />
-        <activity android:name=".UploadDaganganActivity"></activity>
+        <activity android:name=".UploadDaganganActivity"
+            android:theme="@style/AppThemeNoHInt"></activity>
     </application>
 
 </manifest>

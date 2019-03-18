@@ -76,6 +76,8 @@
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/etNamaMasakan"
                 android:hint="Nama Ikan"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -102,6 +104,8 @@
                     android:id="@+id/etHargaMasakan"
                     android:hint="Harga Ikan"
                     android:inputType="number"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -126,6 +130,8 @@
                     android:id="@+id/etHargaKuota"
                     android:hint="Kuota Ikan"
                     android:inputType="number"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -156,6 +162,8 @@
                 android:inputType="textMultiLine"
                 android:layout_width="match_parent"
                 android:textSize="12sp"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimaryDark"
                 android:background="@android:color/transparent"
                 android:layout_height="wrap_content" />
 

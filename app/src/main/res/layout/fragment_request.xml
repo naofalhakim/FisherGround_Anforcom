@@ -166,7 +166,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:text="Ukuran"
+                            android:text="Jasa Pengiriman"
                             android:textSize="15dp"
                             android:textColor="@color/primaryText"/>
                         <RadioGroup
@@ -182,7 +182,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
-                                android:text="Kecil"
+                                android:text="Kargo"
                                 android:textSize="14dp"
                                 android:textColor="@color/btnGreyText"
                                 android:buttonTint="@color/btnGreyText"/>
@@ -190,7 +190,7 @@
                                 android:id="@+id/rb2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sedang"
+                                android:text="Ambil Sendiri"
                                 android:textSize="14dp"
                                 android:textColor="@color/btnGreyText"
                                 android:buttonTint="@color/btnGreyText"/>
@@ -198,7 +198,7 @@
                                 android:id="@+id/rb3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Besar"
+                                android:text="Lain-Lain"
                                 android:textSize="14dp"
                                 android:textColor="@color/btnGreyText"
                                 android:buttonTint="@color/btnGreyText"/>
