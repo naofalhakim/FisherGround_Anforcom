@@ -79,7 +79,9 @@ public class HomeUserActivity extends AppCompatActivity implements BottomNavigat
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.miMessage:
-                startActivity(new Intent(this.getApplicationContext(),ChatActivity.class));
+                Intent i = new Intent(HomeUserActivity.this,ContactListActivity.class);
+                i.putExtra("chat","user");
+                startActivity(i);
                 return true;
 
             case R.id.miNotif:

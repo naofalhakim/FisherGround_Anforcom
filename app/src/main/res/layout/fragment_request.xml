@@ -89,6 +89,7 @@
                             android:textSize="15dp"
                             android:textColor="@color/primaryText"/>
                         <EditText
+                            android:id="@+id/etNamaIkan"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
@@ -116,7 +117,7 @@
                             android:textColor="@color/primaryText"/>
                         <EditText
                             android:layout_width="0dp"
-
+                            android:id="@+id/etBerat"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:hint="berat"
@@ -144,6 +145,7 @@
                             android:textSize="15dp"
                             android:textColor="@color/primaryText"/>
                         <EditText
+                            android:id="@+id/etProvinsi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"

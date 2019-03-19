@@ -1,5 +1,8 @@
 package com.illiyinmagang.miafandi.donaku.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -7,11 +10,42 @@ import io.realm.annotations.PrimaryKey;
  * Created by user on 02/10/2018.
  */
 
-public class IkanJual extends RealmObject{
-    @PrimaryKey
+public class IkanJual{
+//    @PrimaryKey
+
+    @Expose
+    @SerializedName("email")private String email;
+    @Expose
+    @SerializedName("nama_ikan")private String nama;
+    @Expose
+    @SerializedName("harga")private long harga;
+    @Expose
+    @SerializedName("harga_naik")private String hargaNaik;
+    @Expose
+    @SerializedName("image")private String imageURL;
+
     private int id;
-    private String nama;
-    private String email;
+    private String date;
+    private String keterangan, gmb;
+    private long hargasblm, hargassd;
+    private int image, sign, quota;
+
+    public String getHargaNaik() {
+        return hargaNaik;
+    }
+
+    public void setHargaNaik(String hargaNaik) {
+        this.hargaNaik = hargaNaik;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
 
     public String getDate() {
         return date;
@@ -20,8 +54,6 @@ public class IkanJual extends RealmObject{
     public void setDate(String date) {
         this.date = date;
     }
-
-    private String date;
 
     public String getEmail() {
         return email;
@@ -43,7 +75,6 @@ public class IkanJual extends RealmObject{
         this.keterangan = keterangan;
     }
 
-    private String keterangan, gmb;
 
     public String getGmb() {
         return gmb;
@@ -52,9 +83,6 @@ public class IkanJual extends RealmObject{
     public void setGmb(String gmb) {
         this.gmb = gmb;
     }
-
-    private long harga, hargasblm, hargassd;
-    private int image, sign, quota;
 
     public IkanJual(int id, String nama, long harga, long hargasblm, long hargassd, int image, int quota) {
         this.id = id;

@@ -1,12 +1,28 @@
 package com.illiyinmagang.miafandi.donaku.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by user on 18/10/2018.
  */
 
 public class User {
+
+    @Expose
+    @SerializedName("email")private String username;
+    @Expose
+    @SerializedName("password")private String passeword;
+    @Expose
+    @SerializedName("telp")private String notelp;
+    @Expose
+    @SerializedName("status")private String status;
+
+    public User() {
+    }
+
     private int id;
-    private String ktp, nama, notelp, username, passeword,alamat, foto;
+    private String ktp, nama, alamat, foto;
 
     public int getId() {
         return id;
@@ -80,5 +96,13 @@ public class User {
         this.passeword = passeword;
         this.alamat = alamat;
         this.foto = foto;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -14,6 +14,13 @@
         <item>Restoran Bakso Akung</item>
     </string-array>
 
+    <string-array name="Penjual">
+        <item>Pak Paiman</item>
+        <item>Mas Mukidi</item>
+        <item>Bang Jonshon</item>
+        <item>Bakul Iwak</item>
+    </string-array>
+
     <string-array name="Address">
         <item>Jl. Gathotsubroto no.69, Madiun</item>
         <item>Jl. Ir. Soekarno Hatta Block C1 no.23, Surabaya</item>
@@ -45,5 +52,12 @@
         <item>Kami sudah kirimkan hari selasa kemarin, mohon ditunggu saja</item>
         <item>Baik pak terimakasih, kami tunggu pesanan selanjutnya</item>
         <item>Bisa pak, kebetulan kami ada pesanan yang serupa</item>
+    </string-array>
+
+    <string-array name="KonsumenLastChat">
+        <item>Pak Pesannanya sudah datang, kualitasnya oke, cuman icenya lain kali diperbanyak ... </item>
+        <item>Kira kira kalau untuk besok rabu bisa pak ?</item>
+        <item>Iya pak ikan kakapnya yang merah saja, kalau dicampur juga boleh</item>
+        <item>Baik pak, tidak masalah</item>
     </string-array>
 </resources>

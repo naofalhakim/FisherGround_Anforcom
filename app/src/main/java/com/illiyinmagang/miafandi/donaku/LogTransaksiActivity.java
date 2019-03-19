@@ -39,7 +39,6 @@ public class LogTransaksiActivity extends AppCompatActivity {
             }
         });
 
-
         title = (TextView) toolbarMain.findViewById(R.id.toolbar_title);
         title.setText("Transaksi");
 

@@ -188,7 +188,9 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.miMessage:
-                startActivity(new Intent(HomeActivity.this,ContactListActivity.class));
+                Intent i = new Intent(HomeActivity.this,ContactListActivity.class);
+                i.putExtra("chat","");
+                startActivity(i);
                 return true;
 
             case R.id.miNotif:

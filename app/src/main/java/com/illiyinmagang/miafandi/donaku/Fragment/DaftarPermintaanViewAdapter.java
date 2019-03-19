@@ -41,7 +41,7 @@ public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPerm
         viewHolder.penjualan = penjualans.get(i);
         viewHolder.imageView.setImageResource(R.drawable.ic_profil);
         viewHolder.txtNama.setText(viewHolder.penjualan.getNama());
-        viewHolder.txtTelp.setText(viewHolder.penjualan.getKtp());
+        viewHolder.txtTelp.setText(viewHolder.penjualan.getNotelp());
         viewHolder.txtPesanan.setText(viewHolder.penjualan.getPesanan());
         viewHolder.txtWeigth.setText(+viewHolder.penjualan.getWeight()+" Kg");
         viewHolder.txtAddress.setText("Alamat : "+viewHolder.penjualan.getAlamat());
