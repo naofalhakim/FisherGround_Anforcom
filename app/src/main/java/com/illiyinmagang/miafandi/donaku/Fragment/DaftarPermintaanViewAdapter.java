@@ -39,7 +39,7 @@ public class DaftarPermintaanViewAdapter extends RecyclerView.Adapter<DaftarPerm
     @Override
     public void onBindViewHolder(@NonNull DaftarPermintaanViewAdapter.ViewHolder viewHolder, int i) {
         viewHolder.penjualan = penjualans.get(i);
-        viewHolder.imageView.setImageResource(R.drawable.ic_profil);
+        viewHolder.imageView.setImageResource(R.drawable.chelsea);
         viewHolder.txtNama.setText(viewHolder.penjualan.getNama());
         viewHolder.txtTelp.setText(viewHolder.penjualan.getNotelp());
         viewHolder.txtPesanan.setText(viewHolder.penjualan.getPesanan());

@@ -1,6 +1,8 @@
 package com.illiyinmagang.miafandi.donaku.Fragment.Investasi;
 
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,10 +16,12 @@ import com.illiyinmagang.miafandi.donaku.Fragment.HomeUser.BayarActivity;
 import com.illiyinmagang.miafandi.donaku.HomeUserActivity;
 import com.illiyinmagang.miafandi.donaku.R;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 public class DetailInvestasi extends AppCompatActivity {
     ImageView imgInvest;
     Button btnInvest;
-    TextView title, content, detailHarga;
+    TextView title, content, detailHarga,detailText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

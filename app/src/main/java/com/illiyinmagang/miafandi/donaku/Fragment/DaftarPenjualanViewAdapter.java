@@ -40,7 +40,7 @@ public class DaftarPenjualanViewAdapter extends RecyclerView.Adapter<DaftarPenju
     @Override
     public void onBindViewHolder(@NonNull DaftarPenjualanViewAdapter.ViewHolder viewHolder, int i) {
         viewHolder.penjualan = penjualans.get(i);
-        viewHolder.imageView.setImageResource(R.drawable.ic_profil);
+        viewHolder.imageView.setImageResource(R.drawable.pevita);
         viewHolder.txtNama.setText(viewHolder.penjualan.getNama());
         viewHolder.txtPesanan.setText(viewHolder.penjualan.getPesanan());
         viewHolder.txtDeail.setText("Lihat Detail");

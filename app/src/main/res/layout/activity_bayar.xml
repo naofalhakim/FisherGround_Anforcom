@@ -47,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:inputType="number"
         android:textSize="13dp"
         android:hint="Masukkan kontak..."/>
     <TextView
@@ -65,7 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textSize="13dp"
-        android:lines="3"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:gravity="top|start"
         android:hint="Masukkan Alamat..."/>
     </RelativeLayout>
 

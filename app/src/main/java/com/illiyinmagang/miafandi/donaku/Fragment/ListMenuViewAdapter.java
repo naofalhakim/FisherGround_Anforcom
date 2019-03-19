@@ -1,5 +1,6 @@
 package com.illiyinmagang.miafandi.donaku.Fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.illiyinmagang.miafandi.donaku.LoginActivity;
 import com.illiyinmagang.miafandi.donaku.ProfileActivity;
 import com.illiyinmagang.miafandi.donaku.R;
 import com.illiyinmagang.miafandi.donaku.model.IkanJual;
@@ -74,7 +76,9 @@ public class ListMenuViewAdapter extends RecyclerView.Adapter<ListMenuViewAdapte
             }else if(txtNamaIkan.getText().toString().equals("Tentang")){
                 Toast.makeText(context,"4",Toast.LENGTH_SHORT).show();
             }else if(txtNamaIkan.getText().toString().equals("Keluar Aplikasi")){
-                Toast.makeText(context,"5",Toast.LENGTH_SHORT).show();
+                Activity activity = (Activity) context;
+                activity.finish();
+                activity.startActivity(new Intent(context, LoginActivity.class));
             }
         }
     }

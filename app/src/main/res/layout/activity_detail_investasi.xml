@@ -105,7 +105,7 @@
                     android:text="3000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:textColor="@color/accentText"
+                    android:textColor="@color/colorPrimaryDark"
                     android:layout_marginRight="4dp"/>
             </LinearLayout>
 
@@ -130,7 +130,8 @@
                 android:layout_height="wrap_content"
                 android:text="Ukuran kapal yang akan dilakukan peremajaan yaitu 10GT yang diproyeksikan akan selesai dalam kurun waktu 1 bulan. Kapal akan mulai beroperasi satu minggu setelah proses peremajaan selesai. Dana investasi akan kembali sekitar 1 bulan setelah itu atau kurang lebih 4 kali melaut. Sehingga total waktu yang diperlukan sekitar 3 bulan."
                 android:textSize="14dp"
-                android:textColor="@color/btnGreyText"/>
+                android:textColor="@color/btnGreyText"
+                android:layout_gravity="center_vertical|end"/>
 
         </LinearLayout>
 

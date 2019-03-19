@@ -48,7 +48,8 @@
             android:label="Transaksi"
             android:theme="@style/AppThemeDefault"
             android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".LogTransaksiActivity" />
+        <activity android:name=".LogTransaksiActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".DetailPenjualanActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ChatActivity" />

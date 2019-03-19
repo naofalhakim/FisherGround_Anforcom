@@ -13,11 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.illiyinmagang.miafandi.donaku.Fragment.HomeUser.BayarActivity;
+
 public class DetailPenjualanActivity extends AppCompatActivity {
 
     private android.support.v7.widget.Toolbar toolbarMain;
     private Button btnKonfirmasi;
     private TextView txtTitle,txtNamaDangan,txtBeratDagangan,txtTotalDagangan, txtTotalBayar,txtPenerima, txtNotelp,txtAlamatPenerima;
+    private TextView title, content;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +79,7 @@ public class DetailPenjualanActivity extends AppCompatActivity {
     }
 
     private void showDialog(){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Ambil Permintaan");
         alertDialogBuilder
                 .setMessage("Apakah anda ingin mengambil permintaan ini ?")
@@ -98,5 +100,28 @@ public class DetailPenjualanActivity extends AppCompatActivity {
                 });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
+        final View mView = getLayoutInflater().inflate(R.layout.dialogberhasil, null);
+
+        Button btnLanjutkan = (Button)mView.findViewById(R.id.btnLanjutkan);
+        title = (TextView) mView.findViewById(R.id.titleDialog);
+        content = (TextView) mView.findViewById(R.id.contentDialog);
+
+        title.setText("Konfirmasi Ikan Berhasil");
+        content.setText("Petugas kita akan segera mengecek kondisi ikan anda. Jika ikan sesuai standar, ikan akan segera dikirim");
+
+        mBuilder.setView(mView);
+        final AlertDialog dialog = mBuilder.create();
+        dialog.show();
+
+        btnLanjutkan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(DetailPenjualanActivity.this, HomeActivity.class));
+                Toast.makeText(DetailPenjualanActivity.this,"Permintaan Berhasil Dikonfirmasi",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
